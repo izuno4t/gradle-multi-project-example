@@ -1,0 +1,67 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.8.RELEASE"
+    }
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+}
+
+subprojects {
+
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'java'
+    apply plugin: 'java-library'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+
+    group = 'com.example'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+
+    [compileJava, compileTestJava]*.options*.encoding = "UTF-8"
+    [compileJava, compileTestJava]*.options*.compilerArgs = ["-Xlint:all,-options,-processing,-path"]
+
+    configurations {
+        developmentOnly
+        runtimeClasspath {
+          extendsFrom developmentOnly
+        }
+        compileOnly {
+          extendsFrom annotationProcessor
+        }
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.boot:spring-boot-dependencies:2.1.9.RELEASE"
+            mavenBom "org.junit:junit-bom:5.5.2"
+        }
+    }
+
+    dependencies {
+      implementation 'org.springframework.boot:spring-boot-starter'
+      developmentOnly 'org.springframework.boot:spring-boot-devtools'
+      annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+      testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+      }
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+
+}
