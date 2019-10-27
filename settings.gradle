@@ -1,5 +1,9 @@
-rootProject.name = "gradle-multi-module-example"
 include("core")
 include("batch")
 include("webapp")
 include("webservice")
+
+rootProject.name = "gradle-multi-module-example"
+rootProject.children.each {project ->
+	project.buildFileName = "${project.name}.gradle"
+}
