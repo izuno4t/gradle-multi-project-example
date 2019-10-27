@@ -18,6 +18,12 @@ gradle-multi-module-example
 - webapp - SpringBoot を利用したのWebアプリケーション
 - webservice - SpringBoot を利用したのWebアプリケーション
 
+## ToDo
+
+- batch、webapp、webservice でそれぞれ異なるバージョンの core に依存させる場合どうやるのか？
+  - maven ならローカルもリモートも依存関係の記述の仕方が一緒だけど、gradle は書き方が異なる。
+- 依存するSpringBootのバージョンを変更したいときはどうするのか？
+
 ## リファレンス
 
 - [Creating a Multi Module Project](https://spring.io/guides/gs/multi-module/#setting-up-the-library-project)
