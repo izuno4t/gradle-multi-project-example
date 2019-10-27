@@ -2,6 +2,8 @@
 
 Gradleでマルチモジュールのプロジェクトを作ってみる・
 
+[![Build Status](https://travis-ci.com/izuno4t/gradle-multi-module-example.svg?branch=master)](https://travis-ci.com/izuno4t/gradle-multi-module-example)
+
 ## プロジェクトの構成
 
 プロジェクトの構成は1つのライブラリモジュールを1つのコマンドラインアプリケーション（batch）と2つのWebアプリケーション（webapp、webservice）で参照する以下の様な構成
