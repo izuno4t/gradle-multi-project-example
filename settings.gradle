@@ -1,8 +1,9 @@
+include("core")
+include("batch")
+include("webapp")
+include("webservice")
+
 rootProject.name = "gradle-multi-module-example"
-rootDir.eachFileRecurse { f ->
-    if ( f.name == "build.gradle" ) {
-        String relativePath = f.parentFile.absolutePath - rootDir.absolutePath
-        String projectName = relativePath.replaceAll("[\\\\\\/]", ":")
-        include projectName
-    }
+rootProject.children.each {project ->
+	project.buildFileName = "${project.name}.gradle"
 }
