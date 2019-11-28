@@ -21,6 +21,21 @@ gradle-multi-module-example
 - webapp - SpringBoot を利用したのWebアプリケーション
 - webservice - SpringBoot を利用したのWebアプリケーション
 
+## 静的解析
+
+- Checkstyle の実行
+    ```bash
+    ./gradlew checkstyleMain
+    ```
+- PMD（CPD） の実行
+    ```bash
+    ./gradlew checkstyleMain
+    ```
+- SpotBugs の実行
+    ```bash
+    ./gradlew checkstyleMain
+    ```
+
 ## ToDo
 
 - batch、webapp、webservice でそれぞれ異なるバージョンの core に依存させる場合どうやるのか？

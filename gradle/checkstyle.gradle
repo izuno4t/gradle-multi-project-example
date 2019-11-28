@@ -1,0 +1,17 @@
+apply plugin: 'checkstyle'
+
+checkstyle {
+    toolVersion = '8.2'
+    configFile = file("${rootDir}/config/checkstyle/sun_checks.xml")
+//        configProperties = [
+//            'checkstyle.cache.file': "${buildDir}/checkstyle.cache",
+//        ]
+    ignoreFailures = true
+    showViolations = true
+}
+tasks.withType(Checkstyle) {
+    reports {
+        xml.enabled true
+        html.enabled true
+    }
+}

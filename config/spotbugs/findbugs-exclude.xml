@@ -1,0 +1,13 @@
+<FindBugsFilter>
+  <Match>
+    <Class name=".*"/>
+  </Match>
+  <Match>
+    <BugPattern name="NM_SAME_SIMPLE_NAME_AS_SUPERCLASS"/>
+    <BugPattern name="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD"/>
+    <BugPattern name="URF_UNREAD_PUBLIC_OR_PROTECTED_FIELD"/>
+  </Match>
+  <Match>
+    <BugCode name="EI,EI2"/>
+  </Match>
+</FindBugsFilter>
