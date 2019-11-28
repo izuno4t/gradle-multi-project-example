@@ -18,6 +18,11 @@ public class FooServiceTest {
         assertThat(fooService.message()).isNotNull();
     }
 
+    @Test
+    void message() {
+        assertThat(fooService.message()).isEqualTo("Hello");
+    }
+
     @SpringBootApplication
     static class TestConfiguration {
     }

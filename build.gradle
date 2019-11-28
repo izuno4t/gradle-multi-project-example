@@ -37,10 +37,10 @@ subprojects {
     configurations {
         developmentOnly
         runtimeClasspath {
-          extendsFrom developmentOnly
+            extendsFrom developmentOnly
         }
         compileOnly {
-          extendsFrom annotationProcessor
+            extendsFrom annotationProcessor
         }
     }
 
@@ -52,12 +52,14 @@ subprojects {
     }
 
     dependencies {
-      implementation 'org.springframework.boot:spring-boot-starter'
-      developmentOnly 'org.springframework.boot:spring-boot-devtools'
-      annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
-      testImplementation('org.springframework.boot:spring-boot-starter-test') {
-        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-      }
+        implementation 'org.springframework.boot:spring-boot-starter'
+        implementation 'org.apache.commons:commons-lang3:3.9'
+
+        developmentOnly 'org.springframework.boot:spring-boot-devtools'
+        annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+        testImplementation('org.springframework.boot:spring-boot-starter-test') {
+            exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+        }
     }
 
     test {
