@@ -60,3 +60,5 @@ gradle-multi-module-example
 - [project-aries/gradle-multi-project-example](https://github.com/project-aries/gradle-multi-project-example)
 - [Multiple projectなgradleのprojectでcheckstyle pluginを有効にする](https://moznion.hatenadiary.com/entry/2017/09/07/194913)
 - [codecov/example-gradle](https://github.com/codecov/example-gradle)
+- [codecov/example-java](https://github.com/codecov/example-java)
+- [Travis CI tutorial Java projects](https://blog.frankel.ch/travis-ci-tutorial-for-java-projects/)
