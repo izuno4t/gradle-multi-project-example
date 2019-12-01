@@ -51,3 +51,7 @@ gradle-multi-module-example
 - [Building a Multi-Module Spring Boot Application with Gradle](https://reflectoring.io/spring-boot-gradle-multi-module/)
 - [spring-guides/gs-multi-module](https://github.com/spring-guides/gs-multi-module)
 - [spring-projects/spring-framework](https://github.com/spring-projects/spring-framework)
+- [jaredsburrows/android-gradle-java-multi-module-template](https://github.com/jaredsburrows/android-gradle-java-multi-module-template)
+- [project-aries/gradle-multi-project-example](https://github.com/project-aries/gradle-multi-project-example)
+- [Multiple projectなgradleのprojectでcheckstyle pluginを有効にする](https://moznion.hatenadiary.com/entry/2017/09/07/194913)
+- 
