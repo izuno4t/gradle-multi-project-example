@@ -1,15 +1,17 @@
-apply plugin: 'pmd'
 apply plugin: 'cpd'
 
-//cpd {
-//    toolVersion = '6.13.0'
-//}
+cpd {
+  toolVersion = '6.13.0'
+  ignoreFailures = true
+}
 
 cpdCheck {
-    ignoreFailures = true
-    reports {
-        text.enabled = true
-        xml.enabled = true
-    }
-//    source = sourceSets.main.allJava
+  reports {
+    text.enabled = false
+    xml.enabled = true
+  }
+  source = sourceSets.main.allJava
+  exclude '**/*Example.java'
+  exclude '**/*Mapper.java'
+  exclude '**/db/entity/*.java'
 }

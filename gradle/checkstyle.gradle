@@ -14,4 +14,8 @@ tasks.withType(Checkstyle) {
         xml.enabled true
         html.enabled true
     }
+  source = sourceSets.main.allJava
+  exclude '**/*Example.java'
+  exclude '**/*Mapper.java'
+  exclude '**/db/entity/*.java'
 }
