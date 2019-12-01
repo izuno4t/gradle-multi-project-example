@@ -24,14 +24,19 @@ gradle-multi-module-example
 ## 静的解析
 
 - Checkstyle の実行
+
     ```bash
     ./gradlew checkstyleMain
     ```
+
 - PMD（CPD） の実行
+
     ```bash
     ./gradlew checkstyleMain
     ```
+
 - SpotBugs の実行
+
     ```bash
     ./gradlew checkstyleMain
     ```
@@ -54,4 +59,4 @@ gradle-multi-module-example
 - [jaredsburrows/android-gradle-java-multi-module-template](https://github.com/jaredsburrows/android-gradle-java-multi-module-template)
 - [project-aries/gradle-multi-project-example](https://github.com/project-aries/gradle-multi-project-example)
 - [Multiple projectなgradleのprojectでcheckstyle pluginを有効にする](https://moznion.hatenadiary.com/entry/2017/09/07/194913)
-- 
+- [codecov/example-gradle](https://github.com/codecov/example-gradle)
