@@ -14,3 +14,8 @@ dependencies {
     // implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     // implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 }
+
+test {
+    useJUnitPlatform()
+    jvmArgs "-javaagent:${classpath.find { it.name.contains("jmockit") }.absolutePath}"
+}
