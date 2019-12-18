@@ -1,5 +1,35 @@
 apply plugin: 'pmd'
 
 pmd {
-    ignoreFailures = true
+  toolVersion '6.13.0'
+  ignoreFailures = true
+  sourceSets = [sourceSets.main]
+  ruleSets = [
+    'java-basic',            // good practices which should be followed
+    'java-braces',           // regarding the use and placement of braces
+    'java-clone',            // questionable usages of the clone() method
+    'java-codesize',         // problems related to code size or complexity
+    'java-design',           // flag suboptimal code implementations
+    'java-empty',            // empty statements of any kind
+    'java-finalizers',       // problems that can occur with finalizers
+    'java-imports',          // problems that can occur with import statements
+    'java-strictexception',  // strict guidelines about throwing and catching exceptions
+    'java-strings',          // manipulation of the String, StringBuffer, or StringBuilder instances
+    'java-sunsecure',        // check the security guidelines from Sun
+    'java-typeresolution',   // rules which resolve java Class files for comparison
+    'java-unnecessary',      // find useless or unnecessary code
+    'java-unusedcode'        // find unused or ineffective code
+  ]
+}
+
+tasks.withType(Pmd) {
+  reports {
+    xml.enabled true
+    html.enabled false
+  }
+  excludes = [
+    "**/*Example.java",
+    "**/*Mapper.java",
+    "**/db/entity/*.java"
+  ]
 }

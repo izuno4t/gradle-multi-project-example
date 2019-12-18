@@ -1,9 +1,17 @@
 language: java
 dist: trusty
+sudo: false # faster builds
 
 jdk:
   - openjdk11
 
+before_script:
+  - chmod +x gradlew
+
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - ./gradlew build --info
+  # - ./gradlew build --info
+  - ./gradlew check --info
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

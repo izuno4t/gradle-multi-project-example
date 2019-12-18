@@ -3,6 +3,7 @@
 Gradleでマルチモジュールのプロジェクトを作ってみる・
 
 [![Build Status](https://travis-ci.com/izuno4t/gradle-multi-module-example.svg?branch=master)](https://travis-ci.com/izuno4t/gradle-multi-module-example)
+[![codecov](https://codecov.io/gh/izuno4t/gradle-multi-module-example/branch/master/graph/badge.svg)](https://codecov.io/gh/izuno4t/gradle-multi-module-example)
 
 ## プロジェクトの構成
 
@@ -24,14 +25,19 @@ gradle-multi-module-example
 ## 静的解析
 
 - Checkstyle の実行
+
     ```bash
     ./gradlew checkstyleMain
     ```
+
 - PMD（CPD） の実行
+
     ```bash
     ./gradlew checkstyleMain
     ```
+
 - SpotBugs の実行
+
     ```bash
     ./gradlew checkstyleMain
     ```
@@ -51,3 +57,9 @@ gradle-multi-module-example
 - [Building a Multi-Module Spring Boot Application with Gradle](https://reflectoring.io/spring-boot-gradle-multi-module/)
 - [spring-guides/gs-multi-module](https://github.com/spring-guides/gs-multi-module)
 - [spring-projects/spring-framework](https://github.com/spring-projects/spring-framework)
+- [jaredsburrows/android-gradle-java-multi-module-template](https://github.com/jaredsburrows/android-gradle-java-multi-module-template)
+- [project-aries/gradle-multi-project-example](https://github.com/project-aries/gradle-multi-project-example)
+- [Multiple projectなgradleのprojectでcheckstyle pluginを有効にする](https://moznion.hatenadiary.com/entry/2017/09/07/194913)
+- [codecov/example-gradle](https://github.com/codecov/example-gradle)
+- [codecov/example-java](https://github.com/codecov/example-java)
+- [Travis CI tutorial Java projects](https://blog.frankel.ch/travis-ci-tutorial-for-java-projects/)
