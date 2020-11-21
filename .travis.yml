@@ -8,10 +8,17 @@ jdk:
 before_script:
   - chmod +x gradlew
 
+addons:
+  sonarcloud:
+    organization: "izuno4t-github"
+    token:
+      secure: "1783c23a2baeb549750a578dad69b22b762b9f1b" # encrypted value of your token
+
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
   # - ./gradlew build --info
   - ./gradlew check --info
+  - ./gradlew sonarqube
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

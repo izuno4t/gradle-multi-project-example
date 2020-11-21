@@ -10,6 +10,7 @@ buildscript {
         classpath 'org.postgresql:postgresql:42.2.18'
         classpath "gradle.plugin.com.github.spotbugs.snom:spotbugs-gradle-plugin:4.6.0"
         classpath "de.aaschmid:gradle-cpd-plugin:3.1"
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.0"
     }
 }
 
@@ -28,6 +29,7 @@ subprojects {
     apply plugin: 'java-library'
     apply plugin: 'eclipse'
     apply plugin: 'idea'
+    apply plugin: "org.sonarqube"
 
     apply from: "$rootDir/gradle/checkstyle.gradle"
     apply from: "$rootDir/gradle/spotbugs.gradle"
@@ -55,20 +57,25 @@ subprojects {
 
     dependencyManagement {
         imports {
-            mavenBom "org.springframework.boot:spring-boot-dependencies:2.3.6.RELEASE"
+            mavenBom "org.springframework.boot:spring-boot-dependencies:2.4.0"
             mavenBom "org.junit:junit-bom:5.5.2"
         }
     }
 
     dependencies {
         implementation 'org.springframework.boot:spring-boot-starter'
-        implementation 'org.apache.commons:commons-lang3:3.9'
+        implementation 'org.apache.commons:commons-lang3:3.11'
 
         developmentOnly 'org.springframework.boot:spring-boot-devtools'
         annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
-        testImplementation 'org.jmockit:jmockit:1.48'
         testImplementation('org.springframework.boot:spring-boot-starter-test') {
             exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
         }
+    }
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "izuno4t_gradle-multi-project-example"
     }
 }
