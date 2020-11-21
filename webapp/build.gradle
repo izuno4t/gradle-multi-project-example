@@ -1,14 +1,8 @@
-plugins {
-    id 'org.springframework.boot' version '2.2.2.RELEASE'
-    id 'war'
-}
-
 dependencies {
     implementation project(':core')
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.session:spring-session-core'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
       exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }

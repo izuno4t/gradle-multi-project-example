@@ -1,0 +1,9 @@
+plugins {
+    id "org.flywaydb.flyway" version "7.2.1"
+}
+
+flyway {
+    url = 'jdbc:postgresql://127.0.0.1:5432/sample'
+    user = 'sample'
+    password = 'sample'
+}
