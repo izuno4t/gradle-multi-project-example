@@ -1,9 +1,16 @@
 # gradle-multi-module-example
 
-Gradleでマルチモジュールのプロジェクトを作ってみる・
+Gradleでマルチモジュールのプロジェクトを作ってみる。
 
 [![Build Status](https://travis-ci.com/izuno4t/gradle-multi-module-example.svg?branch=master)](https://travis-ci.com/izuno4t/gradle-multi-module-example)
 [![codecov](https://codecov.io/gh/izuno4t/gradle-multi-module-example/branch/master/graph/badge.svg)](https://codecov.io/gh/izuno4t/gradle-multi-module-example)
+
+
+## 構成
+
+- Java11
+- SpringBoot2.4
+- Gradle6.6
 
 ## プロジェクトの構成
 
