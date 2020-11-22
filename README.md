@@ -1,4 +1,4 @@
-# gradle-multi-module-example
+# gradle-multi-project-example
 
 Gradleでマルチモジュールのプロジェクトを作ってみる。
 
