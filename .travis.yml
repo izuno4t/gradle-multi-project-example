@@ -18,7 +18,6 @@ script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
   # - ./gradlew build --info
   - ./gradlew check --info
-  - ./gradlew sonarqube
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
