@@ -29,7 +29,6 @@ subprojects {
     apply plugin: 'java-library'
     apply plugin: 'eclipse'
     apply plugin: 'idea'
-    apply plugin: "org.sonarqube"
 
     apply from: "$rootDir/gradle/checkstyle.gradle"
     apply from: "$rootDir/gradle/spotbugs.gradle"
@@ -73,6 +72,8 @@ subprojects {
         }
     }
 }
+
+apply plugin: "org.sonarqube"
 
 sonarqube {
     properties {
