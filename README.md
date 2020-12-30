@@ -2,7 +2,7 @@
 
 Gradleでマルチモジュールのプロジェクトを作ってみる。
 
-[![Build Status](https://travis-ci.com/izuno4t/gradle-multi-module-example.svg?branch=master)](https://travis-ci.com/izuno4t/gradle-multi-module-example)
+[![Build Status](https://travis-ci.com/izuno4t/gradle-multi-project-example.svg?branch=master)](https://travis-ci.com/izuno4t/gradle-multi-project-example)
 [![codecov](https://codecov.io/gh/izuno4t/gradle-multi-module-example/branch/master/graph/badge.svg)](https://codecov.io/gh/izuno4t/gradle-multi-module-example)
 
 
