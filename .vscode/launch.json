@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch BatchApplication",
+            "request": "launch",
+            "mainClass": "com.example.batch.BatchApplication",
+            "projectName": "batch"
+        },
+        {
+            "type": "java",
+            "name": "Launch CoreApplication",
+            "request": "launch",
+            "mainClass": "com.example.core.CoreApplication",
+            "projectName": "core"
+        },
+        {
+            "type": "java",
+            "name": "Launch WebappApplication",
+            "request": "launch",
+            "mainClass": "com.example.webapp.WebappApplication",
+            "projectName": "webapp"
+        },
+        {
+            "type": "java",
+            "name": "Launch WebserviceApplication",
+            "request": "launch",
+            "mainClass": "com.example.webservice.WebserviceApplication",
+            "projectName": "webservice"
+        }
+    ]
+}
