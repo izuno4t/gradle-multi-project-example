@@ -37,16 +37,22 @@ gradle-multi-module-example
     ./gradlew checkstyleMain
     ```
 
-- PMD（CPD） の実行
+- PMD の実行
 
     ```bash
-    ./gradlew checkstyleMain
+    ./gradlew pmdMain
+    ```
+
+- CPD の実行
+
+    ```bash
+    ./gradlew cpdCheck
     ```
 
 - SpotBugs の実行
 
     ```bash
-    ./gradlew checkstyleMain
+    ./gradlew spotbugsMain
     ```
 
 ## ToDo
