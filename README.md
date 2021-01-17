@@ -18,13 +18,13 @@ Gradleでマルチモジュールのプロジェクトを作ってみる。
 
 ```bash
 gradle-multi-module-example
-├ core        # batchとwebappで共用するモジュール
-├ batch       # batch アプリケーションのモジュール
+├ core        # 他のモジュールで共用するモジュール
+├ batch       # batchアプリケーションのモジュール
 ├ webapp      # Webアプリケーションのモジュール
 └ webservice  # Webサービスのモジュール
 ```
 
-- code - webapp、webservice、batch から参照されるライブラリモジュール
+- core - webapp、webservice、batch から参照されるライブラリモジュール
 - batch - SpringBoot を利用したコマンドラインアプリケーション
 - webapp - SpringBoot を利用したのWebアプリケーション
 - webservice - SpringBoot を利用したのWebアプリケーション
