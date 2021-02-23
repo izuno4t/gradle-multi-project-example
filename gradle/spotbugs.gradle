@@ -1,6 +1,6 @@
 apply plugin: "com.github.spotbugs"
 
 spotbugs {
-    toolVersion = '4.1.1'
+    toolVersion = '4.2.1'
     ignoreFailures = true
 }

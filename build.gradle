@@ -5,9 +5,9 @@ buildscript {
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
-        classpath "io.spring.gradle:dependency-management-plugin:1.0.10.RELEASE"
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.11.RELEASE"
         classpath 'org.postgresql:postgresql:42.2.18'
-        classpath "gradle.plugin.com.github.spotbugs.snom:spotbugs-gradle-plugin:4.6.0"
+        classpath "gradle.plugin.com.github.spotbugs.snom:spotbugs-gradle-plugin:4.6.2"
         classpath "de.aaschmid:gradle-cpd-plugin:3.1"
         classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.0"
     }
@@ -54,8 +54,8 @@ subprojects {
 
     dependencyManagement {
         imports {
-            mavenBom "org.springframework.boot:spring-boot-dependencies:2.4.0"
-            mavenBom "org.junit:junit-bom:5.5.2"
+            mavenBom "org.springframework.boot:spring-boot-dependencies:2.4.3"
+            mavenBom "org.junit:junit-bom:5.7.1"
         }
     }
 
