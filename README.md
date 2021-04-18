@@ -29,6 +29,26 @@ gradle-multi-module-example
 - webapp - SpringBoot を利用したのWebアプリケーション
 - webservice - SpringBoot を利用したのWebアプリケーション
 
+## DBマイグレーション
+
+- マイグレーションの実行
+
+    ```bash
+    ./gradlew clean flywayMigrate
+    ```
+
+- マイグレーションのクリア
+
+    ```bash
+    ./gradlew clean flywayClean
+    ```
+
+- マイグレーションの照会
+
+    ```bash
+    ./gradlew clean flywayInfo
+    ```
+
 ## 静的解析
 
 - Checkstyle の実行
@@ -55,6 +75,12 @@ gradle-multi-module-example
     ./gradlew spotbugsMain
     ```
 
+## 依存関係の更新
+
+```
+./gradlew dependencyUpdates -Drevision=release
+```
+
 ## ToDo
 
 - batch、webapp、webservice でそれぞれ異なるバージョンの core に依存させる場合どうやるのか？
@@ -76,3 +102,5 @@ gradle-multi-module-example
 - [codecov/example-gradle](https://github.com/codecov/example-gradle)
 - [codecov/example-java](https://github.com/codecov/example-java)
 - [Travis CI tutorial Java projects](https://blog.frankel.ch/travis-ci-tutorial-for-java-projects/)
+- [Maven/Gradleでdependencyのupdateをチェックする](https://hirakida29.hatenablog.com/entry/2019/11/13/151358)
+- [Flyway Gradle Plugin](https://flywaydb.org/documentation/usage/gradle/)

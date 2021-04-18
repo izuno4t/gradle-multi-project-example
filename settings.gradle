@@ -1,4 +1,4 @@
-rootProject.name = "multi-projrct-example"
+rootProject.name = "gradle-multi-projrct-example"
 
 include 'schema'
 include 'core'
