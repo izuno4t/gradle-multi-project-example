@@ -1,9 +1,9 @@
 plugins {
-    id "org.flywaydb.flyway" version "7.2.1"
+    id "org.flywaydb.flyway" version "7.8.1"
 }
 
 flyway {
-    url = 'jdbc:postgresql://127.0.0.1:5432/sample'
-    user = 'sample'
-    password = 'sample'
+    url = System.env.POSTGRESQL_URL ?: "jdbc:postgresql://localhost:5432/sample"
+    user = System.env.POSTGRESQL_USERNAME ?: "sample"
+    password = System.env.POSTGRESQL_PASSWORD ?: "sample"
 }
