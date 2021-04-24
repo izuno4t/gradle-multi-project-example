@@ -13,7 +13,7 @@ public class FooController {
         this.fooService = fooService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String home() {
         return fooService.message();
     }
