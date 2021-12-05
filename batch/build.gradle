@@ -1,11 +1,11 @@
 plugins {
-    id "nebula.ospackage" version "8.5.6"
+    id "nebula.ospackage" version "9.0.0"
 }
 
 dependencies {
     implementation project(':schema')
     implementation project(':core')
-    implementation "info.picocli:picocli-spring-boot-starter:4.6.1"
+    implementation "info.picocli:picocli-spring-boot-starter:4.6.2"
     testImplementation 'org.springframework.batch:spring-batch-test'
 }
 

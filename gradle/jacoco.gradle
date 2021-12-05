@@ -1,9 +1,7 @@
 apply plugin: 'jacoco'
 
 jacoco {
-//    https://github.com/jmockit/jmockit1/issues/615
-//    toolVersion = "0.8.5"
-    toolVersion = "0.8.3"
+    toolVersion = "0.8.7"
 }
 
 jacocoTestReport {

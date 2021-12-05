@@ -7,11 +7,11 @@ buildscript {
     }
     dependencies {
         classpath "io.spring.gradle:dependency-management-plugin:1.0.11.RELEASE"
-        classpath 'org.postgresql:postgresql:42.2.18'
-        classpath "gradle.plugin.com.github.spotbugs.snom:spotbugs-gradle-plugin:4.6.2"
-        classpath "de.aaschmid:gradle-cpd-plugin:3.1"
-        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.0"
-        classpath "com.github.ben-manes:gradle-versions-plugin:0.38.0"
+        classpath 'org.postgresql:postgresql:42.3.1'
+        classpath "com.github.spotbugs.snom:spotbugs-gradle-plugin:5.0.0-rc.1"
+        classpath "de.aaschmid:gradle-cpd-plugin:3.3"
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:3.3"
+        classpath "com.github.ben-manes:gradle-versions-plugin:0.39.0"
     }
 }
 
@@ -39,8 +39,8 @@ subprojects {
 
     group = 'com.example'
     version = '0.0.1-SNAPSHOT'
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 
     [compileJava, compileTestJava]*.options*.encoding = "UTF-8"
     [compileJava, compileTestJava]*.options*.compilerArgs = ["-Xlint:all,-options,-processing,-path"]
@@ -57,23 +57,23 @@ subprojects {
 
     dependencyManagement {
         imports {
-            mavenBom "org.springframework.boot:spring-boot-dependencies:2.4.5"
-            mavenBom "org.junit:junit-bom:5.7.1"
+            mavenBom "org.springframework.boot:spring-boot-dependencies:2.6.1"
+            mavenBom "org.junit:junit-bom:5.8.2"
         }
     }
 
     dependencies {
         implementation 'org.springframework.boot:spring-boot-starter'
         implementation 'org.apache.commons:commons-lang3:3.12.0'
-        implementation 'org.postgresql:postgresql:42.2.18'
+        implementation 'org.postgresql:postgresql:42.3.1'
 
         developmentOnly 'org.springframework.boot:spring-boot-devtools'
         annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
-        testImplementation 'org.mockito:mockito-core:3.+'
-        testImplementation 'org.mockito:mockito-junit-jupiter:3.+'
-        testImplementation 'org.mockito:mockito-inline:3.+'
-        testImplementation 'com.h2database:h2:1.+'
+        testImplementation 'org.mockito:mockito-core:4.+'
+        testImplementation 'org.mockito:mockito-junit-jupiter:4.+'
+        testImplementation 'org.mockito:mockito-inline:4.+'
+        testImplementation 'com.h2database:h2:2.+'
 
         testImplementation('org.springframework.boot:spring-boot-starter-test') {
             exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
