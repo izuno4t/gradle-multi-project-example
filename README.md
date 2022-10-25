@@ -8,9 +8,9 @@ Gradleでマルチモジュールのプロジェクトを作ってみる。
 
 ## 構成
 
-- Java11
-- SpringBoot2.4
-- Gradle6.7
+- Java17
+- SpringBoot2.5
+- Gradle6.7 
 
 ## プロジェクトの構成
 
