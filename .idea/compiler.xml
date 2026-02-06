@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.7.5/14b8494f9923ea27471a16f07529964cecfdb831/spring-boot-configuration-processor-2.7.5.jar" />
+        </processorPath>
+        <module name="gradle-multi-projrct-example.core.main" />
+        <module name="gradle-multi-projrct-example.webapp.main" />
+        <module name="gradle-multi-projrct-example.batch.main" />
+        <module name="gradle-multi-projrct-example.schema.main" />
+        <module name="gradle-multi-projrct-example.webservice.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17" />
+  </component>
+</project>
